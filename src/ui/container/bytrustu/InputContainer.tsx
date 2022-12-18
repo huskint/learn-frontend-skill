@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import TextField from '../../components/input/bytrustu/TextField';
+import useInput from '../../hooks/useInput';
+import useInputs from '../../hooks/useInputs';
 
 const InputContainer = () => {
-  const [input, setInput] = useState('');
-  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-  };
+  const {
+    input,
+    onChange: onChangeInput,
+  } = useInput('');
 
-  const [inputs, setInputs] = useState({
+  const {
+    inputs,
+    onChange: onChangeInputs,
+  } = useInputs<{ label2: string; label3: string; }>({
     label2: '',
     label3: '',
   });
-  const onChangeInputs = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setInputs({
-      ...inputs,
-      [name]: value,
-    });
-  };
 
   console.log(input, inputs);
   return (
