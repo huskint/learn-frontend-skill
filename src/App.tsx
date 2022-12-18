@@ -1,7 +1,11 @@
+import React from 'react';
+
+import InputContainer from './ui/container/bytrustu/InputContainer';
+
 function App() {
   return (
     <div>
-      main
+      <InputContainer />
     </div>
   );
 }
