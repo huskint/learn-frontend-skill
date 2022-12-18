@@ -3,6 +3,7 @@ import { useState } from 'react';
 type useInputsType = <T>(initialState: T) => {
   inputs: T;
   onChange: (e: any) => void;
+  reset: () => void;
 }
 
 const useInputs: useInputsType = (initialState) => {
@@ -14,9 +15,13 @@ const useInputs: useInputsType = (initialState) => {
       [name]: value,
     });
   };
+  const reset = () => {
+    setInputs(initialState);
+  };
   return {
     inputs,
     onChange,
+    reset,
   };
 };
 
