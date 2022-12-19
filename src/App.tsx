@@ -1,8 +1,13 @@
+import GlobalStyles from './ui/core/GlobalStyles';
+
 function App() {
   return (
-    <div>
-      main
-    </div>
+    <>
+      <div>
+        main
+      </div>
+      <GlobalStyles />
+    </>
   );
 }
 
