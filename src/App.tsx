@@ -1,10 +1,11 @@
 import GlobalStyles from './ui/core/GlobalStyles';
+import InputContainer from './ui/components/container/InputContainer';
 
 function App() {
   return (
     <>
       <div>
-        main
+        <InputContainer />
       </div>
       <GlobalStyles />
     </>

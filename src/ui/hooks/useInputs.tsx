@@ -1,14 +1,28 @@
-const useInputs = () => {
-  // TODO: useInput Hook을 작성하라.
-  console.log('');
-  const onChange = () => {
-    // TODO: onChange 함수를 작성하라.
+import { useState } from 'react';
+
+type useInputsType = <T>(initialState: T) => {
+  inputs: T;
+  onChange: (e: any) => void;
+  reset: () => void;
+}
+
+const useInputs: useInputsType = (initialState) => {
+  const [inputs, setInputs] = useState(initialState);
+
+  const onChange = (e: any) => {
+    const { name, value } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
   };
+
   const reset = () => {
-    // TODO: reset 함수를 작성하라.
+    setInputs(initialState);
   };
+
   return {
-    inputs: {},
+    inputs,
     onChange,
     reset,
   };
