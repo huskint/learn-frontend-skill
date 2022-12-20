@@ -6,12 +6,10 @@ type useInputsType = <T>(initialState: T) => {
   reset: () => void;
 }
 
-const useInputs: useInputsType = (initialState: any) => {
-  // TODO: useInput Hook을 작성하라.
+const useInputs: useInputsType = (initialState) => {
   const [inputs, setInputs] = useState(initialState);
 
   const onChange = (e: any) => {
-    // TODO: onChange 함수를 작성하라.
     const { name, value } = e.target;
     setInputs({
       ...inputs,
@@ -20,8 +18,7 @@ const useInputs: useInputsType = (initialState: any) => {
   };
 
   const reset = () => {
-    // TODO: reset 함수를 작성하라.
-    setInputs('');
+    setInputs(initialState);
   };
 
   return {

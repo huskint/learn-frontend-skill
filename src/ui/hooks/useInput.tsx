@@ -7,16 +7,13 @@ type useInputType = (initialState?: string) => {
 }
 
 const useInput: useInputType = (initialState = '') => {
-  // TODO: useInput Hook을 작성하라.
   const [input, setInput] = useState(initialState);
 
   const onChange = (e: any) => {
-    // TODO: onChange 함수를 작성하라.
     setInput(e.target.value);
   };
 
   const reset = () => {
-    // TODO: reset 함수를 작성하라.
     setInput('');
   };
 

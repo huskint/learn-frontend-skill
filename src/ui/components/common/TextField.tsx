@@ -52,12 +52,12 @@ export default TextField;
 const Container = styled.div`
   width: 500px;
   height: auto;
-  padding: 20px 0 0 40px;
+  padding: 0 0 0 40px;
   display: flex;
   flex-direction: column;
   
   & + & {
-    margin-top: 20px;
+    margin-top: 32px;
   }
 `;
 
@@ -65,6 +65,7 @@ const Label = styled.label`
   width: 400px;
   height: 20px;
   border-radius: 4px;
+  margin-bottom: 10px;
 `;
 
 const Input = styled.input<TextFieldProps>`

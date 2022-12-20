@@ -18,9 +18,6 @@ const InputContainer = () => {
     label3: '',
   });
 
-  // Todo: onchange
-  console.log(input);
-  console.log('input Container');
   return (
     <>
       <TextField
