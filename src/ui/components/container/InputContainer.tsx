@@ -1,8 +1,25 @@
 import React from 'react';
 
 import TextField from '../common/TextField';
+import useInput from '../../hooks/useInput';
+import useInputs from '../../hooks/useInputs';
 
 const InputContainer = () => {
+  const {
+    input,
+    onChange: onChangeInput,
+  } = useInput('');
+
+  const {
+    inputs,
+    onChange: onChangeInputs,
+  } = useInputs<{ label2: string; label3: string; }>({
+    label2: '',
+    label3: '',
+  });
+
+  // Todo: onchange
+  console.log(input);
   console.log('input Container');
   return (
     <>
@@ -10,9 +27,8 @@ const InputContainer = () => {
         label="label1"
         id="label1"
         placeholder="placeholder"
-        onChange={() => {
-        }}
-        value=""
+        onChange={onChangeInput}
+        value={input}
       />
       <TextField
         label="label2"
@@ -20,9 +36,8 @@ const InputContainer = () => {
         name="label2"
         placeholder="placeholder"
         readOnly
-        onChange={() => {
-        }}
-        value=""
+        onChange={onChangeInputs}
+        value={inputs.label2}
       />
       <TextField
         label="label3"
@@ -30,9 +45,8 @@ const InputContainer = () => {
         name="label3"
         placeholder="placeholder"
         disabled
-        onChange={() => {
-        }}
-        value=""
+        onChange={onChangeInputs}
+        value={inputs.label3}
       />
       <TextField
         label="label4"

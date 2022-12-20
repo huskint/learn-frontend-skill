@@ -10,6 +10,7 @@ interface TextFieldProps {
   errorMessage?: string;
   readOnly?: boolean;
   disabled?: boolean;
+  onChange?: (e: any) => void;
 
   [k: string]: any;
 }
@@ -23,6 +24,7 @@ const TextField = ({
   errorMessage,
   readOnly,
   disabled,
+  onChange,
   ...props
 }: TextFieldProps) => (
   <Container>
@@ -34,6 +36,8 @@ const TextField = ({
       readOnly={readOnly}
       disabled={disabled}
       error={error}
+      onChange={onChange}
+      {...props}
     />
     {
       error && (
