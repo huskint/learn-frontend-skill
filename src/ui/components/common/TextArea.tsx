@@ -1,9 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TextArea = () => (
+interface TextAreaProps {
+  onChange?: (e: any) => void;
+
+  [k: string]: any;
+}
+
+const TextArea = ({
+  onChange,
+  ...props
+}: TextAreaProps) => (
   <Container>
-    <Textarea />
+    <Textarea
+      rows={5}
+      onChange={onChange}
+      {...props}
+    />
   </Container>
 );
 
@@ -14,8 +27,6 @@ const Container = styled.div`
 `;
 
 const Textarea = styled.textarea`
-  width: 400px;
-  height: 119px;
   border: 1px solid #E0E0E0;
   border-radius: 4px;
   padding: 16px;
@@ -23,13 +34,13 @@ const Textarea = styled.textarea`
   outline: none;
   resize: none;
   overflow-y: auto;
-  
+
   &::-webkit-scrollbar-thumb {
     width: 4px;
     height: 90px;
     border-radius: 2px;
   }
-  
+
   &:hover {
     border: 1px solid #828282;
   }
@@ -48,5 +59,4 @@ const Textarea = styled.textarea`
     background-color: #F9F9F9;
     color: #BDBDBD;
   }
-}
 `;
