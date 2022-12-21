@@ -65,7 +65,6 @@ const Label = styled.label`
   width: 400px;
   height: 20px;
   border-radius: 4px;
-  margin-bottom: 10px;
 `;
 
 const Input = styled.input<TextFieldProps>`
@@ -74,6 +73,7 @@ const Input = styled.input<TextFieldProps>`
   border: 1px solid #E0E0E0;
   border-radius: 4px;
   padding: 0 16px;
+  margin-top: 10px;
   font-size: 14px;
 
   ${(props) => props.error
@@ -101,8 +101,8 @@ const Input = styled.input<TextFieldProps>`
   }
 
   &:disabled {
+    background-color: #F9F9F9;
     color: #BDBDBD;
-    border: 1px solid #E0E0E0;
   }
 `;
 
