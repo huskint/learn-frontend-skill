@@ -2,18 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface TextAreaProps {
+  id?: string;
+  name?: string;
+  rows?: number;
+  placeholder?: string;
   onChange?: (e: any) => void;
-
   [k: string]: any;
 }
 
 const TextArea = ({
+  id,
+  name,
+  rows,
+  placeholder,
   onChange,
   ...props
 }: TextAreaProps) => (
   <Container>
     <Textarea
+      id={id}
+      name={name}
       rows={5}
+      placeholder={placeholder}
       onChange={onChange}
       {...props}
     />

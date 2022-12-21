@@ -8,6 +8,10 @@ const TextAreaContainer = () => {
 
   return (
     <TextArea
+      id="textarea"
+      name="textarea"
+      placeholder="placeholder"
+      rows={5}
       onChange={onChange}
       value={input}
     />
