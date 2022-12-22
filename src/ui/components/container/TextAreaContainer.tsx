@@ -1,13 +1,13 @@
 import React from 'react';
 
-import TextArea from '../common/TextArea';
+import Textarea from '../common/Textarea';
 import useInput from '../../hooks/useInput';
 
 const TextAreaContainer = () => {
   const { input, onChange } = useInput('');
 
   return (
-    <TextArea
+    <Textarea
       id="textarea"
       name="textarea"
       placeholder="placeholder"

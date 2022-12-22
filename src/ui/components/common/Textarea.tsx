@@ -10,7 +10,7 @@ interface TextAreaProps {
   [k: string]: any;
 }
 
-const TextArea = ({
+const Textarea = ({
   id,
   name,
   rows,
@@ -18,7 +18,7 @@ const TextArea = ({
   onChange,
   ...props
 }: TextAreaProps) => (
-  <Textarea
+  <Container
       id={id}
       name={name}
       rows={5}
@@ -28,9 +28,9 @@ const TextArea = ({
   />
 );
 
-export default TextArea;
+export default Textarea;
 
-const Textarea = styled.textarea`
+const Container = styled.textarea`
   border: 1px solid #E0E0E0;
   border-radius: 4px;
   padding: 16px 16px 0 16px;
