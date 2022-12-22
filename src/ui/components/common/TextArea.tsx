@@ -18,28 +18,22 @@ const TextArea = ({
   onChange,
   ...props
 }: TextAreaProps) => (
-  <Container>
-    <Textarea
+  <Textarea
       id={id}
       name={name}
       rows={5}
       placeholder={placeholder}
       onChange={onChange}
       {...props}
-    />
-  </Container>
+  />
 );
 
 export default TextArea;
 
-const Container = styled.div`
-
-`;
-
 const Textarea = styled.textarea`
   border: 1px solid #E0E0E0;
   border-radius: 4px;
-  padding: 16px;
+  padding: 16px 16px 0 16px;
   font-size: 14px;
   outline: none;
   resize: none;
