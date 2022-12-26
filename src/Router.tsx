@@ -5,6 +5,7 @@ import { PATH } from './lib/const/path';
 import {
   SignInPage, SignUpPage, Component, Home,
 } from './ui/pages';
+import GugudanPage from './ui/pages/GugudanPage';
 
 const Router = () => (
   <Routes>
@@ -12,6 +13,7 @@ const Router = () => (
     <Route path={PATH.SIGN_IN} element={<SignInPage />} />
     <Route path={PATH.SIGN_UP} element={<SignUpPage />} />
     <Route path={PATH.COMPONENT} element={<Component />} />
+    <Route path={PATH.GUGUDAN} element={<GugudanPage />} />
   </Routes>
 );
 

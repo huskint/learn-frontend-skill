@@ -3,4 +3,5 @@ export const PATH = {
   SIGN_IN: '/signin',
   SIGN_UP: '/signup',
   COMPONENT: '/component',
+  GUGUDAN: '/gugudan/:id',
 };
